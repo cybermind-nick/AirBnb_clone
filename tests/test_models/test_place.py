@@ -31,7 +31,6 @@ class TestPlace(unittest.TestCase):
         except FileNotFoundError:
             pass
 
-
     def test_is_subclass(self):
         self.assertTrue(issubclass(self.place1.__class__, BaseModel), True)
 

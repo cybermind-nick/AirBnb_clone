@@ -40,10 +40,7 @@ class FileStorage:
         "State": State, "User": User, "Amenity": Amenity
     }
 
-
-
     # There is no __init__ function necessary here
-
     def all(self):
         ''' Return dictionary of <class>.<id> : object instance '''
         return self.__objects
@@ -60,10 +57,9 @@ class FileStorage:
         file_dict = {}
         for key, obj in self.__objects.items():
             file_dict[key] = obj.to_dict()
-        
+
         with open(self.__file_path, 'w') as f:
             json.dump(file_dict, f)
-    
 
     def reload(self):
         ''' Reload objects from JSON file.

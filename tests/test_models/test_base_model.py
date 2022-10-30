@@ -24,7 +24,6 @@ class TestBaseModel(unittest.TestCase):
         except FileNotFoundError:
             pass
 
-
     def test_checking_for_functions(self):
         self.assertIsNotNone(BaseModel.__doc__)
         self.assertIsNotNone(BaseModel.save.__doc__)
